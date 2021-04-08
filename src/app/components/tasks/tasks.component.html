@@ -1,0 +1,17 @@
+<div class="todo-container">
+  <ul class="todo-list">
+    <div *ngFor="let task of tasks">
+
+      <div *ngIf="(filter==1) || (filter==2 && task.completed) || (filter==3 && !task.completed)" class="todo" [ngClass]="{'completed':task.completed}">
+          <li class="todo-item">{{ task.name }}</li>
+            <button (click)="onCompleteTask(task.id)" class="complete-btn">
+              <i class="fa fa-check"></i>
+            </button>
+            <button (click)="onDeleteTask(task.id)" class="trash-btn">
+            <i class="fa fa-trash"></i>
+            </button>
+    </div>
+
+    </div>
+  </ul>
+</div>
