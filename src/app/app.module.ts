@@ -9,10 +9,8 @@ import { TasksComponent } from './components/tasks/tasks.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent,
-    InputBarComponent,
-    TasksComponent
+    AppComponent, HeaderComponent,
+    InputBarComponent, TasksComponent
   ],
   imports: [
     BrowserModule

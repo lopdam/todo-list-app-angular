@@ -1,7 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-
 import { TaskModel } from '../../models/task.model';
-
 @Component({
   selector: 'app-tasks',
   templateUrl: './tasks.component.html',
@@ -14,12 +12,10 @@ export class TasksComponent {
   @Output() completeTaskEvent = new EventEmitter();
   @Output() deleteTaskEvent = new EventEmitter();
 
-
   constructor() {
 
     this.tasks = [];
     this.filter = 1;
-
   }
 
   onDeleteTask(id: number): void {
@@ -29,6 +25,5 @@ export class TasksComponent {
   onCompleteTask(id: number): void {
     this.completeTaskEvent.emit(id);
   }
-
 
 }

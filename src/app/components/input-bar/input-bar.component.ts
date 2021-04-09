@@ -27,14 +27,12 @@ export class InputBarComponent {
   ]
 
 
-  addTask(e: any) {
-
+  onAddTask(e: any) {
 
     if (e.value !== "") {
       this.newTaskEvent.emit(e.value);
       e.value = "";
     }
-
     return false;
   }
 
@@ -43,8 +41,6 @@ export class InputBarComponent {
 
     let newFilter: number = e.target.value;
     this.filterEvent.emit(newFilter);
-
-
   }
 
 }
